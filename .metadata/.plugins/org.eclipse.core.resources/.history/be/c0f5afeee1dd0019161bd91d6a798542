@@ -1,0 +1,29 @@
+package textStat;
+import java.io.*;
+
+public class antalMeningar {
+
+	public static void main (String[] args) throws IOException {
+		BufferedReader input = new BufferedReader(new FileReader("src/textStat/text.txt"));
+		
+		int skiljetecken = input.read();
+        int antalskiljetecken = 0;
+
+        while (skiljetecken != -1) {
+            char skiljetecken1 = (char) antalskiljetecken1;
+          
+            if (Character.isPunctation(antalskiljetecken1) ) {
+            	antalskiljetecken++;
+            }
+            skiljetecken = input.read();
+
+            }
+        System.out.println(antalskiljetecken);		            
+		        
+	
+		        
+		        
+	}
+}
+
+

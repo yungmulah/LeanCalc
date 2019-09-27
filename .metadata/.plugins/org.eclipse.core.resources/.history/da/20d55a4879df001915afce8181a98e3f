@@ -1,0 +1,89 @@
+package Lincalc;
+import lincalc.LinCalcJohn;
+
+import java.util.Scanner;
+
+public class LinCalc {
+
+    public static void printArray(String[] array){
+        StringBuffer sb = new StringBuffer();
+        sb.append("[");
+        for (int i = 0; i < array.length; i++) {
+            sb.append(array[i]);
+            sb.append(", ");
+        }
+        // Replace the last ", " with "]"
+        sb.replace(sb.length() - 2, sb.length(), "]");
+        System.out.println(sb);
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String expression;
+        
+
+        double result;
+
+        System.out.print("Enter expression: ");
+        expression = in.nextLine();
+        do {
+            result = evaluate(expression);
+            System.out.println("Result was: " + result);
+            System.out.print("Enter expression: ");
+        } while (!"".equals(expression = in.nextLine()));
+    }
+	
+    public static double calc(String[] lexedPostfix) {
+        return LinCalcJohn.calc(lexedPostfix);
+    }
+	
+    public static String[] toPostfix(String[] inputData) {
+        return LinCalcJohn.toPostfix(inputData);
+    }
+	
+    public static double evaluate(String expression) {
+        String[] lexedInfix = lex(expression);
+        String[] lexedPostfix = toPostfix(lexedInfix);
+        return calc(lexedPostfix);
+    }
+	
+    public static String[] lex(String expr) {
+    	String expression = expr;
+    	
+    	String operander = "+";
+    	String operatorer = "0123456789";
+    	String[] postfix = null;
+    	String stack = "";
+    	String middlefix = "";
+    	    	
+    	for (int i = 0; i < expr.length() + 10; i++) {
+    		char current = expr.charAt(i);
+    			if (memberOf(current, operander)) {
+    				middlefix = middlefix+current;
+    				  
+    			}
+    			if (memberOf(current, operatorer)) {
+    				stack = stack+current;
+    			}
+    				    			
+    			}
+    	System.out.println(stack + middlefix);
+    	return lex = null;
+    		
+
+    	 	
+    	}
+
+    public static boolean memberOf(char x, String z) {
+    	
+		for(int i=0; i<z.length(); i++) {
+			char current = z.charAt(i);
+			if(current == x) {
+				return true;
+			}
+		}
+		return false;
+	
+	
+    }
+}

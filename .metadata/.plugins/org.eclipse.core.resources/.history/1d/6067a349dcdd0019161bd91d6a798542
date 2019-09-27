@@ -1,0 +1,36 @@
+package textStat;
+import java.io.*;
+
+public class antalOrd {
+
+	public static void main (String[] args) throws IOException {
+		BufferedReader input = new BufferedReader(new FileReader("src/textStat/text.txt"));
+		
+		int antalord = 0;
+		int asciichar = input.read();
+		int lastchar = -1;
+		int[] skiljetecken = {33, 34, 35, 367, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 58, 59
+				60, 61, 62, 63, 91, 92, 93, 94, 95, 123, 124, 125, 126};
+		
+		while (asciichar != -1) {
+			if (asciichar == 32 && Character.isLetter(lastchar)) {
+				antalord++;
+			}
+			for (int i = 0; i >= skiljetecken.length; i++) {
+				if (asciichar == skiljetecken[i] && Character.isLetter(lastchar)) {
+					antalord++;
+				}
+			}
+			asciichar = input.read();
+		}
+		return(antalord);
+		}
+		System.out.println("Antal ord: " + antalSkiljetecken);
+		        
+	
+		        
+		        
+	}
+}
+
+

@@ -1,0 +1,56 @@
+package statistik;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class textStatistik3 {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader input = new  BufferedReader (new FileReader("src/statistik/text.txt"));
+		
+		String bokstaver = "abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
+		String skiljetecken = ".,)(:;-";
+		String mellanslag = " ";
+		String meningsAvslutning = ".!?";
+		
+			
+		
+		while (input.ready()) {
+			int intChar = input.read();
+			char character = (char) intChar;
+		}
+	}
+		
+		public static boolean memberOf(char character, String bokstaver, String skiljetecken,
+				String mellanslag, String meningsAvslutning) {
+			int antalBokstaver = 0;
+			int antalSkiljetecken = 0;
+			int antalOrd = 0;
+			int antalMeningar = 0;
+			
+			
+			if (memberOf(character, bokstaver, mellanslag, skiljetecken, meningsAvslutning){
+				antalBokstaver++;
+				antalSkiljetecken++;
+				antalMeningar++;
+				antalOrd++;
+			}
+			if (memberOf(character, skiljetecken) {	
+				antalSkiljetecken++;
+			}
+			if (memberOf(character, mellanslag) {
+				antalMeningar++;
+			}
+			if (memberOf(character, meningsAvslutning) {
+				antalOrd++;
+			}
+		System.out.println("Antal ord: " + antalOrd);
+		System.out.println("Antal meningar: " + antalMeningar);
+		System.out.println("Antal bokstäver: " + antalBokstaver);
+		System.out.println("Antal skiljetecken: " + antalSkiljetecken);
+		System.out.println("Medellangd på ord: ");
+		}
+	}
+
+

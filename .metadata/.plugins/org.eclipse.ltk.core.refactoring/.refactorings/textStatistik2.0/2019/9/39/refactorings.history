@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;textStatistik2.0/bin/textStatistiktvå.java&apos; to &apos;textStatistikTvå.java&apos;" description="Rename resource &apos;textStatistiktvå.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="bin/textStatistiktvå.java" name="textStatistikTvå.java" stamp="1569234299779" updateReferences="true"/>
+</session>

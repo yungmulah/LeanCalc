@@ -1,0 +1,16 @@
+package Lincalc;
+import java.util.*;
+
+public class LinCalcDavid {
+
+	public static void main(String[] args) {
+		
+		String[] split = (expression.length);
+		
+		for (i = 0; i < split.length; i++) {
+			System.out.println(split);
+		}
+		
+	}
+
+}

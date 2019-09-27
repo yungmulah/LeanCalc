@@ -1,0 +1,57 @@
+package labb2;
+import java.io.*;
+public class textStatistik3 {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader input = new BufferedReader(new FileReader("src/text.txt"));
+		
+		String bokstaver = "abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
+		String skiljetecken = ",.-)(;:!?";
+		String orddef = " ";
+		String avslut = ".!?";
+		
+		int antalOrd = 0;
+		int antalMeningar = 0;
+		int antalBokstaver = 0;
+		int antalSkiljetecken = 0;
+		
+		
+		while(input.ready()) {
+			int intChar = input.read();
+			char character = (char) intChar;
+			
+			if(memberOf(character, orddef) == true) {
+				antalOrd++;
+			}
+			if(memberOf(character, avslut) == true) {
+				antalMeningar++;
+			}
+			if(memberOf(character, bokstaver) == true) {
+				antalBokstaver++;
+			}
+			if(memberOf(character, skiljetecken) == true) {
+				antalSkiljetecken++;
+			}
+		}
+		double b = (antalBokstaver);
+		
+		System.out.println("Antal ord: "+antalOrd);
+		System.out.println("Antal meningar: "+antalMeningar);
+		System.out.println("Antal bokstäver: "+antalBokstaver);
+		System.out.println("Antal skiljetecken: "+antalSkiljetecken);
+		System.out.println("Medellängd på ord: "+b/antalOrd+" bokstäver");
+		
+		}
+	
+		
+	public static boolean memberOf(char x, String z) {
+			int index = z.indexOf(x);
+			if(index >=0) {
+				return true;
+			}
+			else {
+				return false;
+			}
+	}
+
+}

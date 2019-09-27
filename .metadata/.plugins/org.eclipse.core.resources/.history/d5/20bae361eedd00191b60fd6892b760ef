@@ -1,0 +1,54 @@
+package statistik;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class textStatistik3 {
+
+	public static void main(String[] args) {
+		BufferedReader input = new  BufferedReader (new FileReader("src/statistik/text.txt"));
+		
+		String bokstaver = "abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
+		String skiljetecken = ".,)(:;-";
+		String mellanslag = " ";
+		String meningsAvslutning = ".!?";
+		
+		int antalBokstaver = 0;
+		int antalSkiljetecken = 0;
+		int antalOrd = 0;
+		int antalMeningar = 0;
+			
+		
+		while (input.ready()) {
+			int intChar = input.read();
+			char character = (char) intChar;
+		}
+	}
+		
+		public static boolean memberOf(char character; String bokstaver, String skiljetecken, 
+				String mellanslag, String meningsAvslutning) {
+			
+			if (memberOf)character, bokstaver) {
+				antalBokstaver++;
+			}
+			if (memberOf)character, skiljetecken) {	
+				antalSkiljetecken++;
+			}
+			if (memberOf)character, mellanslag) {
+				antalMeningar++;
+			}
+			if (memberOf)character, meningsAvslutning) {
+				antalMeningar++;
+			}
+		}
+		
+		
+		
+		System.out.println("Antal ord: " + antalOrd);
+		System.out.println("Antal meningar: " + antalMeningar);
+		System.out.println("Antal bokstäver: " + antalBokstaver);
+		System.out.println("Antal skiljetecken: " + antalSkiljetecken);
+		System.out.println("Medellangd på ord: ");
+	}
+
+

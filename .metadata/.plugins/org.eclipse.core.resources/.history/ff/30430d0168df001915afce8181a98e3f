@@ -1,0 +1,15 @@
+package Lincalc;
+
+public class LinCalcDavid {
+
+	public static void main(String[] args) {
+		String split= "3478+37*2-11";
+		String[] arraySplit = string.split("+-/)(");
+		
+		for (String split : arraySplit) {
+			System.out.println(split);
+		}
+		
+	}
+
+}

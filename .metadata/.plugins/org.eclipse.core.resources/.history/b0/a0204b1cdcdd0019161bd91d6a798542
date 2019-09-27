@@ -1,0 +1,56 @@
+package textStat;
+import java.io.*;
+
+public class textStatistik {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader input = new BufferedReader(new FileReader("src/textStat/text.txt"));
+		
+		if (file.exists()) {
+			System.out.println("Antal ord: " + metodAntalOrd(input));
+			System.out.println("Antal meningar: " + metodAntalMeningar(input));
+			System.out.println("Antal bokstaver: " + metodAntalBokstaver(input));
+			System.out.println("Antal skiljetecken: " + metodAntalSkiljetecken(input));
+			System.out.println("Medellangd på ord: " + metodAntalBokstaver(input)/metodAntalOrd(input));
+		}
+		else {
+			System.out.println("Filen finns inte!")
+			
+		}
+		public static int metodAntalOrd {
+			//jshdsjhd
+		}
+		public static int metodAntalMeningar {
+			//jshdjhsd
+		}
+		public static int metodAntalBokstaver {
+			int bokstaver = input.read();
+			int antalBokstaver = 0;
+			
+			while (bokstaver != -1) {
+				char bokstaver = (char) bokstaver;
+				
+				if (Character.isLetter(bokstaver)) {
+					antalbokstaver++;
+					}
+				bokstaver = input.read();
+				
+				}
+			return(antalbokstaver);
+			}
+			
+		
+		public static int metodAntalSkiljetecken {
+			//skdjsjd
+		}
+		public static int metodMedellangd {
+			
+			//skdjsjd
+		}
+		public static boolean memberOf (char,String) {
+			//sjdhsjdh
+		}
+
+	}
+
+}

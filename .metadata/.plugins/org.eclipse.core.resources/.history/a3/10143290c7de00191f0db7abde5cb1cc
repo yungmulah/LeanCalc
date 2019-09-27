@@ -1,0 +1,3 @@
+module LinCalc2 {
+	requires LinCalcJohn;
+}
