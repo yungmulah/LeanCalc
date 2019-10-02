@@ -1,2 +1,2 @@
 # LeanCalc
-have to get good
+lean and dab
